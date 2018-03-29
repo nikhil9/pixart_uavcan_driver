@@ -1,5 +1,6 @@
 **/*.pyc
-/build
-/.dep
-/.cproject
-/.project
+.cproject
+.project
+.pydevproject
+build/
+.dep
