@@ -22,10 +22,10 @@ uavcan_restart \
 freemem_check \
 spi_device \
 uavcan_debug \
-driver_invensense
+driver_pixart_39xx
 
 MESSAGES_ENABLED = \
 uavcan.protocol.debug.LogMessage
 
-include framework/include.mk
+include modules/framework/include.mk
 
