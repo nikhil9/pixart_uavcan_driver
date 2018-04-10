@@ -20,15 +20,17 @@ static void pixart_task_func(struct worker_thread_timer_task_s* task) {
 	(void)task;
 
 	pixart_read_motion_burst(&pixart_instance, &motion_burst);
-	uavcan_send_debug_keyvalue("motion", motion_burst.motion);
-	uavcan_send_debug_keyvalue("observation", motion_burst.observation);
-	uavcan_send_debug_keyvalue("delta_x", motion_burst.delta_x);
-	uavcan_send_debug_keyvalue("delta_y", motion_burst.delta_y);
-	uavcan_send_debug_keyvalue("sqaul", motion_burst.squal);
-	uavcan_send_debug_keyvalue("rawdata_sum", motion_burst.rawdata_sum);
-	uavcan_send_debug_keyvalue("max_raw", motion_burst.max_raw);
-	uavcan_send_debug_keyvalue("min_raw", motion_burst.min_raw);
-	uavcan_send_debug_keyvalue("shutter_upper", motion_burst.shutter_upper);
-	uavcan_send_debug_keyvalue("shutter_lower", motion_burst.shutter_lower);
+//	uavcan_send_debug_keyvalue("motion", motion_burst.motion);
+//	uavcan_send_debug_keyvalue("observation", motion_burst.observation);
+//	uavcan_send_debug_keyvalue("delta_x", motion_burst.delta_x);
+//	uavcan_send_debug_keyvalue("delta_y", motion_burst.delta_y);
+//	uavcan_send_debug_keyvalue("sqaul", motion_burst.squal);
+//	uavcan_send_debug_keyvalue("rawdata_sum", motion_burst.rawdata_sum);
+//	uavcan_send_debug_keyvalue("max_raw", motion_burst.max_raw);
+//	uavcan_send_debug_keyvalue("min_raw", motion_burst.min_raw);
+//	uavcan_send_debug_keyvalue("shutter_upper", motion_burst.shutter_upper);
+//	uavcan_send_debug_keyvalue("shutter_lower", motion_burst.shutter_lower);
+
+	pixart_flow_msg_broadcast(motion_burst.delta_x, motion_burst.delta_y, motion_burst.squal);
 
 }
