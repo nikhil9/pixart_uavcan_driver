@@ -41,8 +41,6 @@ The binary generated is located at `build/com.hex.flow_1.0/pixart_uavcan_driver-
 
 Flash this binary using `uavcan_gui_tool`
 
-Raw flow data and qaulity is being broadcasted with msg type `hex.optic_flow.OpticFlow`
+Raw flow data and qaulity is being broadcasted with msg type `uavcan.equipment.optic_flow.OpticFlow`
 
-
-**Note**: Since custom dsdl msg work is in progress, installation of dsdl msg headers from `https://github.com/nikhil9/dsdl/tree/0a904a55c1fba01a4184149362fcc85b99477c4b` will be required at location `~/uavcan_vendor_specific_types` to see the msg with `zubax` and `uavcan_gui_tool`
 
